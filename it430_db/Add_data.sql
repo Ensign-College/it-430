@@ -17,20 +17,20 @@ ALTER SEQUENCE goal_type_goal_type_id_seq RESTART WITH 3;
 
 -- customer table
 INSERT INTO
-    customer(customer_id, first_name, last_name, email, password, created_on, is_active, last_login, family_id)
+    customer(customer_id, first_name, last_name, username, email, passhash, created_on, is_active, last_login, family_id)
 VALUES
-    (1, 'John', 'Smith', 'jsmith@email.com', 'hashed_password_1', CURRENT_TIMESTAMP, true, NULL, 1),
-    (2, 'Tom', 'Smith', 'tsmith@email.com', 'hashed_password_4', CURRENT_TIMESTAMP, true, NULL, 1),
-    (3, 'Susan', 'Smith', 'ssmith@email.com', 'hashed_password_5', CURRENT_TIMESTAMP, true, NULL, 1),
-    (4, 'Jane', 'Johnson', 'jjohnson@email.com', 'hashed_password_2', CURRENT_TIMESTAMP, true, NULL, 2),
-    (5, 'Timmy', 'Johnson', 'tjohnson@email.com', 'hashed_password_2', CURRENT_TIMESTAMP, true, NULL, 2),
-    (6, 'George', 'Johnson', 'gjohnson@email.com', 'hashed_password_2', CURRENT_TIMESTAMP, true, NULL, 2),
-    (7, 'Asher', 'Johnson', 'ajohnson@email.com', 'hashed_password_2', CURRENT_TIMESTAMP, true, NULL, 2),
-    (8, 'Alice', 'Williams', 'awilliams@email.com', 'hashed_password_3', CURRENT_TIMESTAMP, true, NULL, 3),
-    (9, 'Ken', 'Williams', 'kwilliams@email.com', 'hashed_password_3', CURRENT_TIMESTAMP, true, NULL, 3),
-    (10, 'Mark', 'Williams', 'mwilliams@email.com', 'hashed_password_3', CURRENT_TIMESTAMP, true, NULL, 3),
-    (11, 'Oswald', 'Williams', 'owilliams@email.com', 'hashed_password_3', CURRENT_TIMESTAMP, true, NULL, 3),
-    (12, 'Jacob', 'Williams', 'jwilliams@email.com', 'hashed_password_3', CURRENT_TIMESTAMP, true, NULL, 3);
+    (1, 'John', 'Smith', 'jsmith', 'jsmith@email.com', 'hashed_password_1', CURRENT_TIMESTAMP, true, NULL, 1),
+    (2, 'Tom', 'Smith', 'tsmith', 'tsmith@email.com', 'hashed_password_4', CURRENT_TIMESTAMP, true, NULL, 1),
+    (3, 'Susan', 'Smith', 'ssmith', 'ssmith@email.com', 'hashed_password_5', CURRENT_TIMESTAMP, true, NULL, 1),
+    (4, 'Jane', 'Johnson', 'jjohnson', 'jjohnson@email.com', 'hashed_password_2', CURRENT_TIMESTAMP, true, NULL, 2),
+    (5, 'Timmy', 'Johnson', 'tjohnson', 'tjohnson@email.com', 'hashed_password_2', CURRENT_TIMESTAMP, true, NULL, 2),
+    (6, 'George', 'Johnson', 'gjohnson', 'gjohnson@email.com', 'hashed_password_2', CURRENT_TIMESTAMP, true, NULL, 2),
+    (7, 'Asher', 'Johnson', 'ajohnson', 'ajohnson@email.com', 'hashed_password_2', CURRENT_TIMESTAMP, true, NULL, 2),
+    (8, 'Alice', 'Williams', 'awilliams', 'awilliams@email.com', 'hashed_password_3', CURRENT_TIMESTAMP, true, NULL, 3),
+    (9, 'Ken', 'Williams', 'kwilliams', 'kwilliams@email.com', 'hashed_password_3', CURRENT_TIMESTAMP, true, NULL, 3),
+    (10, 'Mark', 'Williams', 'mwilliams', 'mwilliams@email.com', 'hashed_password_3', CURRENT_TIMESTAMP, true, NULL, 3),
+    (11, 'Oswald', 'Williams', 'owilliams', 'owilliams@email.com', 'hashed_password_3', CURRENT_TIMESTAMP, true, NULL, 3),
+    (12, 'Jacob', 'Williams', 'jwilliams', 'jwilliams@email.com', 'hashed_password_3', CURRENT_TIMESTAMP, true, NULL, 3);
 ALTER SEQUENCE customer_customer_id_seq RESTART WITH 13;
 
 -- goal table
@@ -50,17 +50,17 @@ ALTER SEQUENCE goal_goal_id_seq RESTART WITH 10;
 
 -- task table
 INSERT INTO
-    task(task_id, task_description, is_active, is_completed, due_date, completion_date, created_date, family_id, created_by)
+    task(task_id, task_description, is_active, is_completed, due_date, completion_date, created_date, family_id, created_by, assigned_to)
 VALUES
-    (1, 'No Screentime', true, false, '2025-10-31 23:59:59', NULL, CURRENT_TIMESTAMP, 1, 1),
-    (2, 'Read Scriptures for 30 Minutes', true, false, '2025-10-15 23:59:59', NULL, CURRENT_TIMESTAMP, 1, 2),
-    (3, 'Clean Room', true, false, '2025-10-10 23:59:59', NULL, CURRENT_TIMESTAMP, 1, 3),
-    (4, 'Mow the Lawn', true, false, '2025-10-5 19:00:00', NULL, CURRENT_TIMESTAMP, 2, 4),
-    (5, 'Volunteer at Local Shelter', true, false, '2025-10-25 23:59:59', NULL, CURRENT_TIMESTAMP, 2, 5),
-    (6, 'Make Dessert', true, false, '2025-10-15 19:00:00', NULL, CURRENT_TIMESTAMP, 2, 6),
-    (7, 'Wash the Car', true, false, '2025-10-20 18:00:00', NULL, CURRENT_TIMESTAMP, 3, 8),
-    (8, 'Clean Living Room', true,false,'2025-10-20 09:00:00',NULL,CURRENT_TIMESTAMP ,3 ,9),
-    (9, 'Do the Dishes',true,false,'2025-10-9 20:00:00',NULL,CURRENT_TIMESTAMP ,3 ,10);
+    (1, 'No Screentime', true, false, '2025-10-31 23:59:59', NULL, CURRENT_TIMESTAMP, 1, 1, 1),
+    (2, 'Read Scriptures for 30 Minutes', true, false, '2025-10-15 23:59:59', NULL, CURRENT_TIMESTAMP, 1, 2, 1),
+    (3, 'Clean Room', true, false, '2025-10-10 23:59:59', NULL, CURRENT_TIMESTAMP, 1, 3, 2),
+    (4, 'Mow the Lawn', true, false, '2025-10-5 19:00:00', NULL, CURRENT_TIMESTAMP, 2, 4, 4),
+    (5, 'Volunteer at Local Shelter', true, false, '2025-10-25 23:59:59', NULL, CURRENT_TIMESTAMP, 2, 5, 5),
+    (6, 'Make Dessert', true, false, '2025-10-15 19:00:00', NULL, CURRENT_TIMESTAMP, 2, 6, 4),
+    (7, 'Wash the Car', true, false, '2025-10-20 18:00:00', NULL, CURRENT_TIMESTAMP, 3, 8, 8),
+    (8, 'Clean Living Room', true,false,'2025-10-20 09:00:00',NULL,CURRENT_TIMESTAMP ,3 ,9, 8),
+    (9, 'Do the Dishes',true,false,'2025-10-9 20:00:00',NULL,CURRENT_TIMESTAMP ,3 ,10, 10);
 ALTER SEQUENCE task_task_id_seq RESTART WITH 10;
 
 -- priority table
