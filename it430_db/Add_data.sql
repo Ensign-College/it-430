@@ -19,20 +19,6 @@ ALTER SEQUENCE goal_type_goal_type_id_seq RESTART WITH 3;
 INSERT INTO
     customer(customer_id, first_name, last_name, username, email, passhash, created_on, is_active, last_login, family_id)
 VALUES
-<<<<<<< HEAD
-    (1, 'John', 'Smith', 'jsmith', 'jsmith@email.com', 'hashed_password_1', CURRENT_TIMESTAMP, true, NULL, 1),
-    (2, 'Tom', 'Smith', 'tsmith', 'tsmith@email.com', 'hashed_password_4', CURRENT_TIMESTAMP, true, NULL, 1),
-    (3, 'Susan', 'Smith', 'ssmith', 'ssmith@email.com', 'hashed_password_5', CURRENT_TIMESTAMP, true, NULL, 1),
-    (4, 'Jane', 'Johnson', 'jjohnson', 'jjohnson@email.com', 'hashed_password_2', CURRENT_TIMESTAMP, true, NULL, 2),
-    (5, 'Timmy', 'Johnson', 'tjohnson', 'tjohnson@email.com', 'hashed_password_2', CURRENT_TIMESTAMP, true, NULL, 2),
-    (6, 'George', 'Johnson', 'gjohnson', 'gjohnson@email.com', 'hashed_password_2', CURRENT_TIMESTAMP, true, NULL, 2),
-    (7, 'Asher', 'Johnson', 'ajohnson', 'ajohnson@email.com', 'hashed_password_2', CURRENT_TIMESTAMP, true, NULL, 2),
-    (8, 'Alice', 'Williams', 'awilliams', 'awilliams@email.com', 'hashed_password_3', CURRENT_TIMESTAMP, true, NULL, 3),
-    (9, 'Ken', 'Williams', 'kwilliams', 'kwilliams@email.com', 'hashed_password_3', CURRENT_TIMESTAMP, true, NULL, 3),
-    (10, 'Mark', 'Williams', 'mwilliams', 'mwilliams@email.com', 'hashed_password_3', CURRENT_TIMESTAMP, true, NULL, 3),
-    (11, 'Oswald', 'Williams', 'owilliams', 'owilliams@email.com', 'hashed_password_3', CURRENT_TIMESTAMP, true, NULL, 3),
-    (12, 'Jacob', 'Williams', 'jwilliams', 'jwilliams@email.com', 'hashed_password_3', CURRENT_TIMESTAMP, true, NULL, 3);
-=======
     (1, 'John', 'Smith', 'jsmith', 'jsmith@email.com', '$2b$12$E3q3hCVEU7Fh0eoqVOV95eNtUt4AEebEqYRJktFoKWhyKqjs4MVLO', CURRENT_TIMESTAMP, true, NULL, 1),
     (2, 'Tom', 'Smith', 'tsmith', 'tsmith@email.com', '$2b$12$8rgCBoKv3EK5Vgym2StJK.1gdIOiZdUiItiCcgiNzYLh6qGzPgANS', CURRENT_TIMESTAMP, true, NULL, 1),
     (3, 'Susan', 'Smith', 'ssmith', 'ssmith@email.com', '$2b$12$feGbDrU2yVC72162VZJ1SONsrNib/.lgTxZiM1x9MJ3txQJsh/0m.', CURRENT_TIMESTAMP, true, NULL, 1),
