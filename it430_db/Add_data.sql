@@ -19,6 +19,7 @@ ALTER SEQUENCE goal_type_goal_type_id_seq RESTART WITH 3;
 INSERT INTO
     customer(customer_id, first_name, last_name, username, email, passhash, created_on, is_active, last_login, family_id)
 VALUES
+<<<<<<< HEAD
     (1, 'John', 'Smith', 'jsmith', 'jsmith@email.com', 'hashed_password_1', CURRENT_TIMESTAMP, true, NULL, 1),
     (2, 'Tom', 'Smith', 'tsmith', 'tsmith@email.com', 'hashed_password_4', CURRENT_TIMESTAMP, true, NULL, 1),
     (3, 'Susan', 'Smith', 'ssmith', 'ssmith@email.com', 'hashed_password_5', CURRENT_TIMESTAMP, true, NULL, 1),
@@ -31,6 +32,20 @@ VALUES
     (10, 'Mark', 'Williams', 'mwilliams', 'mwilliams@email.com', 'hashed_password_3', CURRENT_TIMESTAMP, true, NULL, 3),
     (11, 'Oswald', 'Williams', 'owilliams', 'owilliams@email.com', 'hashed_password_3', CURRENT_TIMESTAMP, true, NULL, 3),
     (12, 'Jacob', 'Williams', 'jwilliams', 'jwilliams@email.com', 'hashed_password_3', CURRENT_TIMESTAMP, true, NULL, 3);
+=======
+    (1, 'John', 'Smith', 'jsmith', 'jsmith@email.com', '$2b$12$E3q3hCVEU7Fh0eoqVOV95eNtUt4AEebEqYRJktFoKWhyKqjs4MVLO', CURRENT_TIMESTAMP, true, NULL, 1),
+    (2, 'Tom', 'Smith', 'tsmith', 'tsmith@email.com', '$2b$12$8rgCBoKv3EK5Vgym2StJK.1gdIOiZdUiItiCcgiNzYLh6qGzPgANS', CURRENT_TIMESTAMP, true, NULL, 1),
+    (3, 'Susan', 'Smith', 'ssmith', 'ssmith@email.com', '$2b$12$feGbDrU2yVC72162VZJ1SONsrNib/.lgTxZiM1x9MJ3txQJsh/0m.', CURRENT_TIMESTAMP, true, NULL, 1),
+    (4, 'Jane', 'Johnson', 'jjohnson', 'jjohnson@email.com', '$2b$12$XyM6VmpU6amBWMXcHLe2aOUGzyh8z5Z5NPFymTq1T/Z3OV.vQFU3O', CURRENT_TIMESTAMP, true, NULL, 2),
+    (5, 'Timmy', 'Johnson', 'tjohnson', 'tjohnson@email.com', '$2b$12$0V.VPVGHsICX9ZvrAdBeI.nc3DUs.906hAQJwf3sLwcYAjdn49RBi', CURRENT_TIMESTAMP, true, NULL, 2),
+    (6, 'George', 'Johnson', 'gjohnson', 'gjohnson@email.com', '$2b$12$GC6q1WigKjtTMoBzsXeVTOtGKnPFjqRCq2wqGeCAMz0lWYRzlGkni', CURRENT_TIMESTAMP, true, NULL, 2),
+    (7, 'Asher', 'Johnson', 'ajohnson', 'ajohnson@email.com', '$2b$12$UEFI7mMecoWZTi2zDGBQyOK0FzDDTW.bbrL3DgLfwEbe4DKPaz0..', CURRENT_TIMESTAMP, true, NULL, 2),
+    (8, 'Alice', 'Williams', 'awilliams', 'awilliams@email.com', '$2b$12$h/FGhWSkg1t3WtqISX9eceFrZPZNJHAYwpdr7FdsQ6jmuYNAT2mgm', CURRENT_TIMESTAMP, true, NULL, 3),
+    (9, 'Ken', 'Williams', 'kwilliams', 'kwilliams@email.com', '$2b$12$u0YfdmP.AgFuGQzOw9k9QOHB/PwrOKxeDzf3SuckJ9Vx5XEIi.U2i', CURRENT_TIMESTAMP, true, NULL, 3),
+    (10, 'Mark', 'Williams', 'mwilliams', 'mwilliams@email.com', '$2b$12$/e/lqiixkoUgVeHdE9tqcesbGXPdRxs6wbvYIsXNKDMaECuHDAtwK', CURRENT_TIMESTAMP, true, NULL, 3),
+    (11, 'Oswald', 'Williams', 'owilliams', 'owilliams@email.com', '$2b$12$pAOUDVuCOxN.NyLqomSWue7ddJ.H4rqOysFXzfuYOokf1.TO5dqJW', CURRENT_TIMESTAMP, true, NULL, 3),
+    (12, 'Jacob', 'Williams', 'jwilliams', 'jwilliams@email.com', '$2b$12$xcDvC0kbDo94GTL.YW.5HOQyQYK6xyOi.Xbgpz1QZaDLdOJJxm2KO', CURRENT_TIMESTAMP, true, NULL, 3);
+>>>>>>> d0cffbefe7158e7b29e96b48f8d2fe45fb1a887e
 ALTER SEQUENCE customer_customer_id_seq RESTART WITH 13;
 
 -- goal table
